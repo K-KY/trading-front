@@ -1,0 +1,23 @@
+.header {
+    background: gray;
+    padding: 1rem;
+    display: flex;
+    position: relative; /* 자식 absolute 기준 */
+    height: 3rem; /* 필요에 따라 조절 */
+    align-items: center;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+
+.header-content {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}

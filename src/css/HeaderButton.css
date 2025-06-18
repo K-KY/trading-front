@@ -1,0 +1,27 @@
+.header-button:hover {
+    background-color: rgba(106, 103, 103, 0.5);
+}
+
+.header-button {
+    display: flex;
+    background-color: rgb(106, 103, 103);
+    border: none;
+    padding: 0.5rem 1rem;  /* 내부 여백 */
+    border-radius: 30px;
+    font-size: 2rem;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;  /* 줄바꿈 방지 */
+}
+
+.header-button-container {
+    display:  flex;
+    background-color: rgb(106, 103, 103);
+    border: none;
+    width: 6rem;
+    height: 3rem;
+    text-align: center;
+    border-radius: 10%
+
+}
