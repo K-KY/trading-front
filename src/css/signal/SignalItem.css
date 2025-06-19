@@ -1,0 +1,67 @@
+
+.signal-item {
+    border: 1px solid black;
+    border-radius: 30px;
+    cursor: default;
+    pointer-events: auto;
+}
+
+.signal-item td {
+    height: 100px;
+}
+
+.signal-item tr {
+    border-radius: 10px;
+}
+
+.signal-item:hover {
+    background-color: rgba(80, 76, 76, 0.5);
+}
+.bg-lGrey {
+    background-color: lightgray;
+}
+
+.signal-list {
+    list-style: none;
+    margin: 5px;
+    padding:0;
+
+}
+
+.signal-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: white;
+}
+
+.signal-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.title-position-long {
+    background: #a2e63c;
+    background: linear-gradient(90deg,rgba(162, 230, 60, 1) 0%, rgba(222, 230, 154, 1) 45%, rgba(255, 255, 255, 1) 100%);
+    font-size:  1.2rem;
+    align-items: start;
+    padding-left: 20px;
+    border-radius: 10px;
+}
+
+.title-position-short {
+    background: #c20000;
+    background: linear-gradient(90deg,rgba(194, 0, 0, 1) 0%, rgba(184, 134, 134, 1) 51%, rgba(255, 255, 255, 1) 100%);
+    font-size:  1.2rem;
+    align-items: start;
+    padding-left: 20px;
+    border-radius: 10px;
+}
+
+
+
+
+
+
