@@ -1,0 +1,15 @@
+
+.signal-board {
+    display: flex;
+    justify-content: center;
+    background-color: dimgray;
+}
+
+
+.signal-table {
+    text-align: center;
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 30px;
+}
+
