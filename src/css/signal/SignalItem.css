@@ -45,21 +45,35 @@
 .title-position-long {
     background: #a2e63c;
     background: linear-gradient(90deg,rgba(162, 230, 60, 1) 0%, rgba(222, 230, 154, 1) 45%, rgba(255, 255, 255, 1) 100%);
+}
+
+.item-title {
     font-size:  1.2rem;
-    align-items: start;
+    align-items: center;
+    display: flex;
     padding-left: 20px;
     border-radius: 10px;
+    height: 2.5rem;
+    font-weight: bold;
 }
 
 .title-position-short {
     background: #c20000;
     background: linear-gradient(90deg,rgba(194, 0, 0, 1) 0%, rgba(184, 134, 134, 1) 51%, rgba(255, 255, 255, 1) 100%);
-    font-size:  1.2rem;
-    align-items: start;
-    padding-left: 20px;
-    border-radius: 10px;
 }
 
+
+.item-content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    width: 25%;
+}
+.item-content-title {
+    font-weight: bold;
+}
 
 
 

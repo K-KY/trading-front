@@ -13,6 +13,9 @@ export interface Signal {
 }
 
 const SignalItem = ({signal}: { signal: Signal }) => {
+    function click() {
+        console.log("click")
+    }
     return (
         // <tbody>
         //
@@ -45,21 +48,37 @@ const SignalItem = ({signal}: { signal: Signal }) => {
         //
         // </tbody>
         <ul className="signal-list">
-                <li key={signal.signalNumber} className="signal-card">
-                    <SignalItemTitle title={signal.position}></SignalItemTitle>
-                    <div className="signal-row">
-                        <span>{signal.signalNumber}</span>
-                        <span>{signal.symbol}</span>
-                        <span>{signal.position}</span>
-                        <span>{signal.kind}</span>
+            <li key={signal.signalNumber} className="signal-card">
+                <SignalItemTitle title={signal.position}></SignalItemTitle>
+                <div className="signal-row" onClick ={() => click()}>
+                    <div className={"item-content-container"}>
+                        <span><span className={"item-content-title"}>신호 번호 : </span>{signal.signalNumber}</span>
                     </div>
-                    <div className="signal-row">
-                        <span>{signal.price}</span>
-                        <span>{signal.interval}</span>
-                        <span>{signal.time}</span>
-                        <span>{signal.intensity}</span>
+                    <div className={"item-content-container"}>
+                        <span><span className={"item-content-title"}>종목 : </span>{signal.symbol}</span>
                     </div>
-                </li>
+                    <div className={"item-content-container"}>
+                        <span><span className={"item-content-title"}>포지션 : </span>{signal.position}</span>
+                    </div>
+                    <div className={"item-content-container"}>
+                        <span><span className={"item-content-title"}>신호 종류 : </span>{signal.kind}</span>
+                    </div>
+                </div>
+                <div className="signal-row">
+                    <div className={"item-content-container"}>
+                        <span><span className={"item-content-title"}>가격 : </span>{signal.price}</span>
+                    </div>
+                    <div className={"item-content-container"}>
+                        <span>{signal.interval} <span className={"item-content-title"}>봉</span></span>
+                    </div>
+                    <div className={"item-content-container"}>
+                        <span><span className={"item-content-title"}>발생시간 : </span>{signal.time}</span>
+                    </div>
+                    <div className={"item-content-container"}>
+                        <span><span className={"item-content-title"}>신호 강도 : </span>{signal.intensity}</span>
+                    </div>
+                </div>
+            </li>
         </ul>
 
     )
