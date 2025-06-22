@@ -1,4 +1,5 @@
 import "../../css/signal/SignalItem.css"
+import "../../css/util/BoardUtil.css"
 import SignalItemTitle from "./SignalItemTitle.tsx";
 
 export interface Signal {
@@ -47,10 +48,10 @@ const SignalItem = ({signal}: { signal: Signal }) => {
         //     </tr>
         //
         // </tbody>
-        <ul className="signal-list">
-            <li key={signal.signalNumber} className="signal-card">
+        <ul className="board-list">
+            <li key={signal.signalNumber} className="board-card">
                 <SignalItemTitle title={signal.position}></SignalItemTitle>
-                <div className="signal-row" onClick ={() => click()}>
+                <div className="board-item-row" onClick ={() => click()}>
                     <div className={"item-content-container"}>
                         <span><span className={"item-content-title"}>신호 번호 : </span>{signal.signalNumber}</span>
                     </div>
@@ -64,7 +65,7 @@ const SignalItem = ({signal}: { signal: Signal }) => {
                         <span><span className={"item-content-title"}>신호 종류 : </span>{signal.kind}</span>
                     </div>
                 </div>
-                <div className="signal-row">
+                <div className="board-item-row">
                     <div className={"item-content-container"}>
                         <span><span className={"item-content-title"}>가격 : </span>{signal.price}</span>
                     </div>
