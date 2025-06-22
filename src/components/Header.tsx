@@ -11,12 +11,12 @@ const Header = () => {
                 <img id="logo" src="vite.svg" alt="logo"/>
             </div>
             <div className={"header-content"}>
-                <HeaderButton id="btn_1" text="신호" path={"/signal"}/>
-                <HeaderButton id="btn_2" text="포지션" path={"#"}/>
-                <HeaderButton id="btn_3" text="기록" path={"#"}/>
-                <HeaderButton id="btn_4" text="수익" path={"#"}/>
-                <HeaderButton id="btn_5" text="자산" path={"#"}/>
-                <HeaderButton id="btn_6" text="모니터" path={"#"}/>
+                <HeaderButton id="signal" text="신호" path={"/signal"}/>
+                <HeaderButton id="positon" text="포지션" path={"/position"}/>
+                <HeaderButton id="history" text="기록" path={"#"}/>
+                <HeaderButton id="revenue" text="수익" path={"#"}/>
+                <HeaderButton id="assets" text="자산" path={"#"}/>
+                <HeaderButton id="monitor" text="모니터" path={"#"}/>
             </div>
         </header>
     )
