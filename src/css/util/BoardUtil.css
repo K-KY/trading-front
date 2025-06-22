@@ -1,0 +1,30 @@
+.board-list {
+    list-style: none;
+    margin: 5px;
+    padding: 0;
+    min-width: 1200px;
+}
+
+
+.board-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: white;
+}
+
+.board-item-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.item-content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    width: 25%;
+}
