@@ -5,6 +5,7 @@
     position: relative; /* 자식 absolute 기준 */
     height: 3rem; /* 필요에 따라 조절 */
     align-items: center;
+    min-width: 1000px;
 }
 
 .header-logo {
