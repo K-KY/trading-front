@@ -1,21 +1,23 @@
-# 1️⃣ Node.js 환경에서 React 빌드
-FROM node:18 AS build
-WORKDIR /app
+# Stage 1: Build
+FROM node:lts-alpine as build
 
-# package.json과 package-lock.json을 먼저 복사하여 의존성 설치
-COPY package.json package-lock.json ./
-RUN npm install
+WORKDIR /usr/src/app
 
-# 전체 소스 코드 복사 후 빌드 실행
-COPY . .
+COPY package.json /usr/src/app/package.json
+COPY package-lock.json /usr/src/app/package-lock.json
+RUN npm ci
+
+COPY . /usr/src/app
+
 RUN npm run build
 
-# 2️⃣ Nginx를 사용하여 정적 파일 서빙
-FROM nginx:latest
-COPY --from=build /app/dist /usr/share/nginx/html
+# Stage 2: Production Image
+FROM nginx:alpine
 
-# 환경 변수 설정
-ENV PORT=80
+COPY --from=build /usr/src/app/dist /usr/share/nginx/html
+COPY --from=build /usr/src/app/nginx.conf /etc/nginx/conf.d
+RUN rm /etc/nginx/conf.d/default.conf # 추가
+
 EXPOSE 80
 
 CMD ["nginx", "-g", "daemon off;"]
