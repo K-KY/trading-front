@@ -9,18 +9,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Get GitHub Actions CIDR
-        run: |
-          curl https://api.github.com/meta | jq -r '.actions[]' > actions_cidr.txt
-
-      - name: Update Firewall
-        run: |
-          while read cidr; do
-            aws ec2 authorize-security-group-ingress --group-id $SG_ID \
-              --protocol tcp --port 22 --cidr $cidr
-          done < actions_cidr.txt
-
-
       - name: 소스 코드 체크아웃
         uses: actions/checkout@v3
 
