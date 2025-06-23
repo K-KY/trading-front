@@ -1,6 +1,8 @@
 import "../../css/signal/SignalItem.css"
 import "../../css/util/BoardUtil.css"
 import SignalItemTitle from "./SignalItemTitle.tsx";
+import {useState} from "react";
+import SignalModal from "./SignalModal.tsx";
 
 export interface Signal {
     signalNumber: number;
@@ -14,44 +16,13 @@ export interface Signal {
 }
 
 const SignalItem = ({signal}: { signal: Signal }) => {
-    function click() {
-        console.log("click")
-    }
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
     return (
-        // <tbody>
-        //
-        //         <tr className="signal-item bg-lGrey">
-        //         <td>
-        //             {signal.signalNumber}
-        //         </td>
-        //         <td>
-        //             {signal.symbol}
-        //         </td>
-        //         <td>
-        //             {signal.position}
-        //         </td>
-        //         <td>
-        //             {signal.kind}
-        //         </td>
-        //         <td>
-        //             {signal.price}
-        //         </td>
-        //         <td>
-        //             {signal.interval}
-        //         </td>
-        //         <td>
-        //             {signal.time}
-        //         </td>
-        //         <td>
-        //             {signal.intensity}
-        //         </td>
-        //     </tr>
-        //
-        // </tbody>
         <ul className="board-list">
-            <li key={signal.signalNumber} className="board-card">
+            <li key={signal.signalNumber} className="board-card" onClick={() => setIsModalOpen(true)}>
                 <SignalItemTitle title={signal.position}></SignalItemTitle>
-                <div className="board-item-row" onClick ={() => click()}>
+                <div className="board-item-row">
                     <div className={"item-content-container"}>
                         <span><span className={"item-content-title"}>신호 번호 : </span>{signal.signalNumber}</span>
                     </div>
@@ -79,6 +50,7 @@ const SignalItem = ({signal}: { signal: Signal }) => {
                         <span><span className={"item-content-title"}>신호 강도 : </span>{signal.intensity}</span>
                     </div>
                 </div>
+                <SignalModal items={signal} isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}></SignalModal>
             </li>
         </ul>
 
