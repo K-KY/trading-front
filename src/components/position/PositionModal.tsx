@@ -72,6 +72,8 @@ const PositionModal = ({isOpen, onClose, items}: ModalProps) => {
                     <p><strong>손절 가격 : </strong> {items.stopLoss}</p>
                     <p><strong>피라미딩 : </strong> {items.pyramiding ? "true" : "false"}</p>
                     {/* 더 많은 상세 정보 가능 */}
+                    <button>시장가 청산</button>
+                    <button>지정가 청산</button>
                 </div>
             </div>
 
