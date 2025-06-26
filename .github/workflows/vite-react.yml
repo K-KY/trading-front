@@ -51,7 +51,6 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            docker rm -f $(docker ps -a -q);
             docker pull ${{ secrets.DOCKER_USERNAME }}/vite-react-app:latest
             docker stop vite-app || true
             docker rm vite-app || true
