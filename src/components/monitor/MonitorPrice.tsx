@@ -5,7 +5,8 @@ const MonitorPrice = ({name} : {name : string}) => {
 
     const [price, setPrice] = useState(0)
     useEffect(() => {
-        ws.current = new WebSocket("ws://localhost:8000/monitor-price?worker="+`${name}`);
+        ws.current = new WebSocket("ws://52.79.234.48:8000/monitor-price?worker="+`${name}`);
+        // ws.current = new WebSocket("ws://localhost:8000/monitor-price?worker="+`${name}`);
         ws.current.onopen = () => {
             console.log("웹소켓 연결됨");
         };
