@@ -28,3 +28,13 @@
     text-align: left;
     width: 25%;
 }
+
+.item-title {
+    font-size: 1.2rem;
+    align-items: center;
+    display: flex;
+    padding-left: 20px;
+    border-radius: 10px;
+    height: 2.5rem;
+    font-weight: bold;
+}

@@ -16,7 +16,7 @@ const Header = () => {
                 <HeaderButton id="history" text="기록" path={"#"}/>
                 <HeaderButton id="revenue" text="수익" path={"#"}/>
                 <HeaderButton id="assets" text="자산" path={"#"}/>
-                <HeaderButton id="monitor" text="모니터" path={"#"}/>
+                <HeaderButton id="monitor" text="모니터" path={"/monitor"}/>
             </div>
         </header>
     )
